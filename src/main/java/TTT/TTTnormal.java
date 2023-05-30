@@ -23,6 +23,12 @@ public class TTTnormal implements ActionListener{
     JLabel textField = new JLabel();
     JButton[] buttons = new JButton[9];
     boolean player1_turn;
+    int tiles = 9;
+    
+    public void set5x5(){
+        this.buttons = new JButton[25];
+        this.tiles =25;
+    }
     
     
     TTTnormal(){
@@ -47,7 +53,7 @@ public class TTTnormal implements ActionListener{
         button_panel.setLayout(new GridLayout(3,3));
         button_panel.setBackground(new Color(150,150,150));
         
-        for(int i=0; i<9; i++){
+        for(int i=0; i<tiles; i++){
             buttons[i] = new JButton();
             button_panel.add(buttons[i]);
             buttons[i].setFont(new Font("MV Boli",Font.BOLD,120));
@@ -84,7 +90,7 @@ public class TTTnormal implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        for(int i=0; i<9; i++){
+        for(int i=0; i<tiles; i++){
             if(e.getSource()==buttons[i]){
                 if(player1_turn){
                     if(buttons[i].getText()==""){
@@ -107,6 +113,8 @@ public class TTTnormal implements ActionListener{
             }
         }
     }
+    
+    
     
     public void check(){
         if(

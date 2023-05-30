@@ -19,6 +19,12 @@ public class TTTnormalbot extends TTTnormal{
     Font tryfont = new Font("MV Boli",Font.BOLD,0);
     Font normfont = new Font("MV Boli",Font.BOLD,120);
     int counter =0;
+
+    @Override
+    public void set5x5() {
+        super.set5x5(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 
     enum Difficulty {
@@ -51,7 +57,7 @@ public class TTTnormalbot extends TTTnormal{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        for(int i=0; i<9; i++){
+        for(int i=0; i<tiles; i++){
             if(e.getSource()==buttons[i]){
                 if(buttons[i].getText()==""){
                     buttons[i].setForeground(new Color(255,0,0));
@@ -91,7 +97,7 @@ public class TTTnormalbot extends TTTnormal{
         int move;
         setButtons(false);
         do{
-             move = rand.nextInt(0,9);
+             move = rand.nextInt(0,tiles);
         }while (buttons[move].getText()!="");
         
         buttons[move].setForeground(new Color(0,0,255));
@@ -135,7 +141,7 @@ public class TTTnormalbot extends TTTnormal{
 
     public int makeOptimumMove1(){
         
-        for(int i =0;i<9;i++){
+        for(int i =0;i<tiles;i++){
             if(buttons[i].getText()==""){
                 buttons[i].setFont(tryfont);
                 buttons[i].setText("O");
@@ -150,14 +156,14 @@ public class TTTnormalbot extends TTTnormal{
         }
         int move;
         do{
-            move = rand.nextInt(0,9);
+            move = rand.nextInt(0,tiles);
         }while (buttons[move].getText()!="");
         return move;
     }
     
     public int makeOptimumMove2(){
         
-        for(int i =0;i<9;i++){
+        for(int i =0;i<tiles;i++){
             if(buttons[i].getText()==""){
                 buttons[i].setFont(tryfont);
                 buttons[i].setText("X");
@@ -182,12 +188,12 @@ public class TTTnormalbot extends TTTnormal{
 //    }
     
     public boolean checkDraw(){
-        if(counter<9)return false;
+        if(counter<tiles)return false;
         return true;
     }
     
     public void Draw(){
-        for(int i=0;i<9;i++){
+        for(int i=0;i<tiles;i++){
             buttons[i].setBackground(Color.green);
         }
         setButtons(false);
