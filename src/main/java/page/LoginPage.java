@@ -104,7 +104,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 460, 220));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\OneDrive - Universiti Malaya\\3. DS\\Suzume\\SuzuDoor.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("././Map_pic/SuzuDoor.jpg")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

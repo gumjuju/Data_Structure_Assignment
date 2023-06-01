@@ -49,7 +49,7 @@ public class Exit extends javax.swing.JFrame {
         jLabel2.setText("YOU WIN");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 380, 220));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\OneDrive - Universiti Malaya\\3. DS\\Suzume\\SuzuExit.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("././Map_pic/SuzuExit.jpg")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
