@@ -22,6 +22,7 @@ public class LevelSelectionPage extends javax.swing.JFrame {
     int difficulty;
     
     public LevelSelectionPage() {
+        this.setVisible(true);
 //        this.setLocationRelativeTo(null);
         initComponents();
     }
