@@ -20,6 +20,7 @@ public class LoginPage extends javax.swing.JFrame {
      * Creates new form LoginPage
      */
     public LoginPage() {
+        
         initComponents();
     }
 
@@ -118,8 +119,9 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(evt.getSource()== EnterButton){
             this.dispose();
-            Main start = new Main();//add start game to enable login and exit
-            start.startGame();
+            LevelSelectionPage level = new LevelSelectionPage();
+//            Main start = new Main();//add start game to enable login and exit
+//            start.startGame();
         }
     }//GEN-LAST:event_EnterButtonActionPerformed
 
