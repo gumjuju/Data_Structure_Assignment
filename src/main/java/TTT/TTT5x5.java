@@ -40,27 +40,15 @@ public class TTT5x5 extends JFrame implements ActionListener {
 
     
     private void resetGame() {
-    int option = JOptionPane.showConfirmDialog(this, "Do you want to play again?", "Game Over", JOptionPane.YES_NO_OPTION);
-
-    if (option == JOptionPane.YES_OPTION) {
-        initializeGameBoard();
-        movesCount = 0;
-        currentPlayer = PLAYER_SYMBOL;
-        for (int i = 0; i < BOARD_SIZE; i++) {
-            for (int j = 0; j < BOARD_SIZE; j++) {
-                buttons[i][j].setText("");
-            }
+    initializeGameBoard();
+    movesCount = 0;
+    currentPlayer = PLAYER_SYMBOL;
+    for (int i = 0; i < BOARD_SIZE; i++) {
+        for (int j = 0; j < BOARD_SIZE; j++) {
+            buttons[i][j].setText("");
         }
-    } else {
-        JOptionPane.showMessageDialog(this, "Thanks for playing!");
-
-        // Print the score
-        JOptionPane.showMessageDialog(this, "Score: " + scoreBoard);
-
-        // Exit the game
-        System.exit(0);
     }
-}
+    System.exit(0); }
 
 
     
